@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-navy-900;
+  }
+}
+
+@layer components {
+  .container-marketing {
+    @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-cta {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-cta-primary {
+    @apply bg-navy-900 text-white px-5 py-3 text-sm hover:bg-navy-800;
+  }
+  
+  .btn-cta-secondary {
+    @apply bg-transparent border border-navy-200 text-navy-900 px-5 py-3 text-sm hover:bg-navy-50;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
